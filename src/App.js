@@ -2,15 +2,19 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-let num=2;
-let num2=4;
+let arr=[10,30,50,38,50,90,70,80,40]
 let sum=0
 
+
+
 function onSubmit() {
-sum=num+num2
+arr.map((singleObj)=>{
+  sum+=singleObj
+})
+
 
     
-       console.log("Addition is " +" "+ sum );
+       console.log("Addition is " +" "+ sum);
     
     
   
