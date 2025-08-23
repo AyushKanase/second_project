@@ -3,17 +3,16 @@ import './App.css';
 
 function App() {
 let num=2;
-
+let num2=4;
+let sum=0
 
 function onSubmit() {
-  if(num%2===0)
-    { 
-       console.log("Number is even" + num );
-    }
-    else
-    {
-      console.log("Number is odd" + num);
-    }
+sum=num+num2
+
+    
+       console.log("Addition is" + sum );
+    
+    
   
 }
 
