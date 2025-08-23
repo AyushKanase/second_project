@@ -10,7 +10,7 @@ function onSubmit() {
 sum=num+num2
 
     
-       console.log("Addition is" + sum );
+       console.log("Addition is " +" "+ sum );
     
     
   
