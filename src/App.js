@@ -1,33 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-let arr=[10,30,50,38,50,90,70,80,40]
+  const [age,ageSet]=useState()
+  const [showBlock,setShowblock]=useState(false)
 
-
-
-
-function onSubmit() {
-  let sum=0
-arr.map((singleObj)=>{
-  sum+=singleObj
-})
-
-
+  function handelAge(event){
+    ageSet(event.target.value);
     
-       console.log("Addition is " +" "+ sum);
-    
-    
+  }
+  function onSubmit(){
+    setShowblock(true);
+  }
   
-}
+
+
+
+
+
 
 
 
 
   return (
-    <button className='btnSubmit ' onClick={onSubmit}>submit</button>
-    
+    <div>
+      <input name="age" value={age} onChange={handelAge}/>
       
+    <button className='btnSubmit ' onClick={onSubmit}>submit</button>
+    <div>
+      {showBlock &&
+      <div>{age}</div>}
+    </div>
+    
+      </div>
   );
   
 }
