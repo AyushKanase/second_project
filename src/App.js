@@ -3,35 +3,28 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [age,ageSet]=useState()
-  const [showBlock,setShowblock]=useState(false)
+  const [number,setNumber]=useState()
+  const [number2,setNumber2]=useState()
+  const [sum,setSum]=useState()
 
-  function handelAge(event){
-    ageSet(event.target.value);
+  function handelvalue(event){
+    setNumber(event.target.value);
     
   }
   function onSubmit(){
-    setShowblock(true);
+    sum=number+number2
+    setNumber2()
   }
   
 
 
 
-
-
-
-
-
-
   return (
     <div>
-      <input name="age" value={age} onChange={handelAge}/>
+      <input name="number" value={number2} onChange={handelvalue}/>
       
-    <button className='btnSubmit ' onClick={onSubmit}>submit</button>
-    <div>
-      {showBlock &&
-      <div>{age}</div>}
-    </div>
+    <button className='btnSubmit' onClick={onSubmit}>submit</button>
+    
     
       </div>
   );
