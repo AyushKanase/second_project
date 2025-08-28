@@ -32,7 +32,7 @@ const [sub,setSub]=useState()
   }
     const handleNum2=(event)=>{
       setNumber2 (parseInt(event.target.value));
-      {}
+      
     }
      
 
@@ -51,18 +51,14 @@ const [sub,setSub]=useState()
     <button className='btnSubmit' onClick={onSubmitDivision}>Div</button>
     <button className='btnSubmit' onClick={onSubmitSubtraction}>Sub</button>
     
-    
-    { sum ? onSubmitAdditionIfTrue:}
-
-    
-
-    {mult?MultiplicationIftrue:expressionIfFalse}
-    
-
-    {div?DivisionIftrue:expressionIfFalse}
+    <div>
+    { sum ?setSum:sub}
+    {mult?setMult:div}
+    {div?setDiv:mult}
+    {sub?setSub:sum}
+</div>
     
 
-    {sub?SubtractionIftrue:expressionIfFalse}  
     
   
     
