@@ -3,17 +3,16 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [count, setCount] = useState(0)
-  
-function handleIncrement(){
-  setCount(count+1)
-}
+ const student = { name: "Ayush", age: 20, marks: 90 };  
 
-  return (<div>
-   <div>{count}</div>
-  <div> <button className='btnSubmit' onClick={handleIncrement}>Increment</button></div>
-      
-      </div>
+
+  return (
+    <div>
+          Name: {student.name}
+          Age:{student.age}
+          Marks:{student.marks}
+    </div>
+   
   );
 
 }
