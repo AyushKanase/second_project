@@ -25,7 +25,8 @@ const students = [
      
        
           {students.map((singleObject) => (
-            <tr key={singleObject}>
+            <tr key={singleObject}
+            style={{ backgroundColor: singleObject.age > 30 ? "black" : "inherit",color:'grey' }}>
               <td>{singleObject.rollNo}</td>
               <td>{singleObject.name}</td>
               <td>{singleObject.age}</td>
