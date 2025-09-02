@@ -3,16 +3,32 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
- const student = { name: "Ayush", age: 20, marks: 90 };  
+const students = [
+    { id: 1, name: "Ayush", age: 20, marks: 90 },
+    { id: 2, name: "xyz", age: 25, marks: 90 },
+    {id:3,name:"person",age:30,marks:90}
+  ];
 
 
   return (
-    <div>
-          Name: {student.name}
-          Age:{student.age}
-          Marks:{student.marks}
-    </div>
-   
+    <table border="1">
+       
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Marks</th>
+          </tr>
+     
+       
+          {students.map((singleObject,id) => (
+            <tr key={id}>
+              <td>{singleObject.name}</td>
+              <td>{singleObject.age}</td>
+              <td>{singleObject.marks}</td>
+            </tr>
+          ))}
+       
+      </table>
   );
 
 }
